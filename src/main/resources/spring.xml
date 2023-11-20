@@ -4,8 +4,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="org.example.shape.Square" id="square" />
-    <bean class="org.example.shape.Circle" id="circle" />
-    <bean class="org.example.shape.Triangle" id="triangle" />
-
+    <bean class="org.example.shape.Square" id="square"/>
+    <bean class="org.example.shape.Circle" id="circle"/>
+    <bean class="org.example.shape.Triangle" id="triangle"/>
+    <bean class="org.example.shape.Drawing" id="drawing1">
+        <property name="colour" value="RED"/>
+        <property name="shape" ref="circle"/>
+    </bean>
+    <bean class="org.example.shape.Drawing" id="drawing2">
+        <constructor-arg  ref="triangle" />
+        <constructor-arg  value="GREEN" />
+    </bean>
+    <bean class="org.example.shape.Drawing" id="drawing3">
+        <constructor-arg ref="square" />
+        <property name="colour" value="BLUE" />
+     </bean>
+    <bean class="org.example.shape.Drawing" id="drawing4">
+        <constructor-arg value="YELLOW" />
+        <property name="shape" ref="square" />
+    </bean>
 </beans>

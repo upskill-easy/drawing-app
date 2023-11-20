@@ -2,8 +2,6 @@ package org.example.shape;
 
 public class Circle implements Shape {
 
-    public int id = 1;
-
     public Circle() {
         System.out.println("Circle constructor...");
     }

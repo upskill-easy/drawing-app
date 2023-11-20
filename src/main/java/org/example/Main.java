@@ -12,9 +12,5 @@ public class Main {
 
         ApplicationContext context;
         context = new ClassPathXmlApplicationContext("spring.xml");
-
-        Circle c = context.getBean("circle", Circle.class);
-        c.draw();
-        
     }
 }
