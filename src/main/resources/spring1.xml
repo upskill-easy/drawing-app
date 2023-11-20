@@ -7,8 +7,8 @@
     <bean class="org.example.shape.Square" id="square"/>
     <bean class="org.example.shape.Circle" id="circle"/>
     <bean class="org.example.shape.Triangle" id="triangle"/>
-    <bean class="org.example.shape.Drawing" id="drawing1">
-        <property name="colour" value="RED"/>
+    <bean class="org.example.shape.Drawing" id="drawing1" init-method="init" destroy-method="destroy">
+        <property name="colour" value="GREEN"/>
         <property name="shape" ref="circle"/>
     </bean>
     <bean class="org.example.shape.Drawing" id="drawing2">
